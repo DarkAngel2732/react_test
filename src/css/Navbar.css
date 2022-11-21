@@ -1,0 +1,42 @@
+nav {
+    display: flex;
+    padding: 15px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    opacity: 80%;
+    align-items: center;
+    opacity: 0.9;
+    padding: 0 30px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar--logo {
+    max-width: 150px;
+}
+
+.navbar--info {
+    margin-left: auto;
+}
+
+.navbar--info>a {
+    padding: 0px 20px;
+}
+
+.navbar--login {
+    background-color: transparent;
+    color: #e86463;
+    border: 0;
+    margin: 0 5px;
+}
+
+.navbar--signup {
+    background-color: #e86463;
+    color: white;
+    border: 0;
+    margin: 0 5px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 36%);
+}
