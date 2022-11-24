@@ -13,7 +13,7 @@ export default function Content(props) {
     return (
         <div>
             <div className="content--background">
-                <img alt="backgroundImage" src={hotel}></img>
+                <img className="content--backgroundImage" alt="backgroundImage" src="https://cf.bstatic.com/xdata/images/hotel/640x200/254048033.jpg?k=a1662a89b8eddcdadd22ded68653923cdbabe353de63ce16898dd383ed980d36&o="></img>
             </div>
             <div className="content--mainContainer">
                 <div className="content--profileHeader">

@@ -1,8 +1,10 @@
 .content--background{
-    width: 100%;
-    height: 275px;
-    overflow: hidden;
-    image-resolution: 300dpi;
+    height: 400px;
+    overflow:hidden;
+}
+
+.content--backgroundImage{
+    width:100%;
 }
 
 .content--mainContainer{
