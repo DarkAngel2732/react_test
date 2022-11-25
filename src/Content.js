@@ -1,5 +1,4 @@
 import "./css/Content.css"
-import hotel from "./images/xxx-hotel.png"
 import profileImg from "./images/profileImg.png"
 
 export default function Content(props) {
@@ -12,7 +11,7 @@ export default function Content(props) {
     return (
         <div>
             <div className="content--background">
-                <img className="content--backgroundImage" alt="backgroundImage" src="https://cf.bstatic.com/xdata/images/hotel/640x200/254048033.jpg?k=a1662a89b8eddcdadd22ded68653923cdbabe353de63ce16898dd383ed980d36&o="></img>
+                <img className="content--backgroundImage" alt="backgroundImage" src={props.hotelURL}></img>
             </div>
             <div className="content--mainContainer">
                 <div className="content--profileHeader">
@@ -26,7 +25,7 @@ export default function Content(props) {
                     <div className="profileShare">Share</div>
                 </div>
                 <hr/>
-                <h1 className="content--mainHeading">Lorem Ipsum</h1>
+                <h1 className="content--mainHeading">{props.hotel} {props.countryVisit}</h1>
                 <p className="content--article">{props.description}</p>
                 <h2 className="content--activitiesHeading">Activities</h2>
                 <ul className="content--activitiesList">

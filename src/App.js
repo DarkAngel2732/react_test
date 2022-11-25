@@ -1,35 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
 import Content from './Content'
-import testData from "./testdata.js"
 
-function App() {
-  const [tripData, setTripData] = React.useState({})
+export default function App() {
+  const [tripData, setTripData] = React.useState()
 
 
   React.useEffect(function () {
     fetch("http://localhost/TravelCreatorsREST/api/trip/read.php")
-    .then(res => res.json())
-    //.then(data => setTripData(data))
-  })
+      .then(res => res.json())
+      .then(data => setTripData(data))
+  }, [])
 
-  console.log("render")
-
-  return (
-    <div id='container'>
-      <Navbar />
-      <Content
-        firstName={testData.firstName}
-        lastName={testData.lastName}
-        countryFrom={testData.countryFrom}
-        tripTo={testData.tripTo}
-        hotel={testData.hotel}
-        hotelImage={testData.hotelImage}
-        description={testData.description}
-        activities={testData.activities}
-      />
-    </div>
-  )
+  if (tripData) {
+    return (
+      <div id='container'>
+        <Navbar />
+        <Content
+          firstName={tripData.data[0].creator_firstname}
+          lastName={tripData.data[0].creator_lastname}
+          countryVisit={tripData.data[0].country}
+          hotel={tripData.data[0].hotel}
+          description={tripData.data[0].description}
+          activities={tripData.data[0].activity.split(',')}
+          hotelURL={tripData.data[0].hotel_url}
+        />
+      </div>
+    )
+  }
 }
-
-export default App;
