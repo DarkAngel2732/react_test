@@ -3,7 +3,6 @@ import hotel from "./images/xxx-hotel.png"
 import profileImg from "./images/profileImg.png"
 
 export default function Content(props) {
-    console.log(props.activities)
     const activitiesList = props.activities.map(activity => {
         return(
             <li className="content--activitiesList">{activity}</li>
